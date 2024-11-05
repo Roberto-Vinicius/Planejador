@@ -305,9 +305,22 @@ bool Planejador::ler(const std::string &arq_pontos,
 /// *******************************************************************************
 
 /// Noh: os elementos dos conjuntos de busca do algoritmo A*
-/* ***********  /
-/  FALTA FAZER  /
-/  *********** */
+class Noh {
+public:
+    IDPonto id_pt;   // Identificador do ponto
+    IDRota id_rt;    // Identificador da rota
+    double g;        // Custo acumulado desde a origem
+    double h;        // Heurística (estimativa do custo até o destino)
+
+    // Construtor
+    Noh(const IDPonto &id_pt, const IDRota &id_rt, double g, double h)
+        : id_pt(id_pt), id_rt(id_rt), g(g), h(h) {}
+
+    // Método para calcular o custo total
+    double f() const {
+        return g + h; // Custo total é a soma do custo acumulado e da heurística
+    }
+};
 
 /// Calcula o caminho entre a origem e o destino do planejador usando o algoritmo A*
 /// Retorna o comprimento do caminho encontrado.
