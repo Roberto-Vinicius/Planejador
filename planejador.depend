@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1732322430 source:c:\users\roberto vinicius\documents\programação\material de estudo\c++\planejador\planejador-main.cpp
+	<iostream>
+	<chrono>
+	"planejador.h"
+
+1732328931 c:\users\roberto vinicius\documents\programação\material de estudo\c++\planejador\planejador.h
+	<string>
+	<list>
+
+1732328955 source:c:\users\roberto vinicius\documents\programação\material de estudo\c++\planejador\planejador.cpp
+	<iostream>
+	<fstream>
+	<algorithm>
+	<cmath>
+	"planejador.h"
+
